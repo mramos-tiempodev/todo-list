@@ -1,0 +1,29 @@
+{
+    "name": "tecaz/client",
+    "description": "This will be change",
+    "license": "MIT",
+    "keywords": ["exchange", "zf2", "neo4j"],
+    "homepage": "http://elartedelpapaloteo.com/",
+    "authors": [
+        {
+            "name": "Martin Ramos",
+            "email": "martinn21@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "zendframework/zendframework": "~2.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "User\\": "module/User/src/",
+            "UnitTest\\User\\": "tests/unit/Module/User/",
+            "Wall\\": "module/Wall/src/",
+            "UnitTest\\Wall\\": "tests/unit/Module/Wall/"
+        }
+    }
+
+}
