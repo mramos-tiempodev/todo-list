@@ -38,4 +38,9 @@ return array(
             __DIR__ . '/../view',
         ),
     ),
+    'service_manager' => array(
+        'invokables' => array(
+            'Zend\Hydrator\ClassMethods' => 'Zend\Hydrator\ClassMethods',
+        ),
+    ),
 );
