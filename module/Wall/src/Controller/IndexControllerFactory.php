@@ -20,13 +20,12 @@ class IndexControllerFactory implements FactoryInterface
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
         /** @var User $user */
-        //$user = $serviceLocator->get('User\Entity\User');
-        $user = new User();
+        $serviceManager = $serviceLocator->getServiceLocator();
+        $user = $serviceManager->get('User\Entity\User');
         /** @var ClassMethods $classMethods */
-        //$classMethods = $serviceLocator->get('Zend\Hydrator\ClassMethods');
-        $classMethods = new ClassMethods();
+        $classMethods = $serviceManager->get('Zend\Hydrator\ClassMethods');
         /** @var ApiClient $apiClient */
-        $apiClient = $serviceLocator->get('Api\Client\ApiClient');
+        $apiClient = $serviceManager->get('Api\Client\ApiClient');
 
         return new IndexController($user, $apiClient, $classMethods);
     }
