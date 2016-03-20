@@ -8,6 +8,9 @@ return array(
         ),
         'invokables' => array(
             'Api\Service\JsonDecoder' => 'Api\Service\JsonDecoder',
+            'Zend\Http\Client' => 'Zend\Http\Client',
+            'Zend\Session\Container' => 'Zend\Session\Container',
+            'Zend\Log\Logger' => 'Zend\Log\Logger',
         ),
     ),
     'api' => array(

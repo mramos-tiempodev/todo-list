@@ -42,5 +42,8 @@ return array(
         'invokables' => array(
             'Zend\Hydrator\ClassMethods' => 'Zend\Hydrator\ClassMethods',
         ),
+        'factories' => array(
+            'Api\Client\ApiClient' => 'Api\Client\ApiClientFactory',
+        ),
     ),
 );
