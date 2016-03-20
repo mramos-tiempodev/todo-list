@@ -18,8 +18,8 @@ return array(
         ),
     ),
     'controllers' => array(
-        'invokables' => array(
-            'Wall\Controller\Index' => 'Wall\Controller\IndexController'
+        'factories' => array(
+            'Wall\Controller\Index' => 'Wall\Controller\IndexControllerFactory',
         ),
     ),
     'view_manager' => array(

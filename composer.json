@@ -22,7 +22,9 @@
             "User\\": "module/User/src/",
             "UnitTest\\User\\": "tests/unit/Module/User/",
             "Wall\\": "module/Wall/src/",
-            "UnitTest\\Wall\\": "tests/unit/Module/Wall/"
+            "UnitTest\\Wall\\": "tests/unit/Module/Wall/",
+            "Api\\": "module/Api/src/",
+            "UnitTest\\Api\\": "tests/unit/Module/Api/"
         }
     }
 
