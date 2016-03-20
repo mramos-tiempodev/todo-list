@@ -35,15 +35,16 @@ class ApiClient extends ApiClientAbstract
     {
         /** @var Response $response */
         $response = $client->send();
-
+        $result = false;
         if ($response->isSuccess()) {
-            return $this->getDecoder()->decode($response->getBody(), Json::TYPE_ARRAY);
+            $result = $this->getDecoder()->decode($response->getBody(), Json::TYPE_ARRAY);
         } else {
             $logger = $this->getLogger();
             $logger->addWriter($this->getStream());
             $logger->debug($response->getBody());
-            return false;
         }
+
+        return $result;
     }
 
     /**
