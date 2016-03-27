@@ -2,6 +2,7 @@
 namespace Wall\Controller;
 
 use Api\Client\ApiClient;
+use Api\Client\ApiClientFactory;
 use User\Entity\User;
 use Zend\Hydrator\ClassMethods;
 use Zend\ServiceManager\FactoryInterface;
@@ -25,7 +26,10 @@ class IndexControllerFactory implements FactoryInterface
         /** @var ClassMethods $classMethods */
         $classMethods = $serviceManager->get('Zend\Hydrator\ClassMethods');
         /** @var ApiClient $apiClient */
-        $apiClient = $serviceLocator->get('Api\Client\ApiClient');
+        //$apiClient = $serviceLocator->get('Api\Client\ApiClient');
+
+        $apiClientFactory = new ApiClientFactory();
+        $apiClient = $apiClientFactory->createService($serviceLocator);
 
         return new IndexController($user, $apiClient, $classMethods);
     }
