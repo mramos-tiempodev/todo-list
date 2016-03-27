@@ -10,6 +10,7 @@ return array(
     'modules' => array(
         'User',
         'Wall',
+        'Api',
     ),
 
     // These are various options for the listeners attached to the ModuleManager

@@ -26,10 +26,7 @@ class IndexControllerFactory implements FactoryInterface
         /** @var ClassMethods $classMethods */
         $classMethods = $serviceManager->get('Zend\Hydrator\ClassMethods');
         /** @var ApiClient $apiClient */
-        //$apiClient = $serviceLocator->get('Api\Client\ApiClient');
-
-        $apiClientFactory = new ApiClientFactory();
-        $apiClient = $apiClientFactory->createService($serviceLocator);
+        $apiClient = $serviceLocator->get('Api\Client\ApiClient');
 
         return new IndexController($user, $apiClient, $classMethods);
     }
