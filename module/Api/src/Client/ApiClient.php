@@ -19,7 +19,7 @@ class ApiClient extends ApiClientAbstract
     public function getWall($username)
     {
         $endPointConfiguration = $this->getEndPointConfiguration();
-        $url = $endPointConfiguration->getWall() . sprintf($endPointConfiguration->getHost(), $username);
+        $url = $endPointConfiguration->getHost() . sprintf($endPointConfiguration->getWall(), $username);
         $client = $this->setDataToClient($url);
         return $this->doRequest($client);
     }
