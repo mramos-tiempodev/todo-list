@@ -19,6 +19,7 @@ class EndPointConfigurationFactory implements FactoryInterface
     {
         /** @var Config $options */
         $options = $serviceLocator->get('Config');
-
+var_dump($options);
         return new EndPointConfiguration($options['api_end_point']);
-    }}
+    }
+}
