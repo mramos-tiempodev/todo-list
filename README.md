@@ -16,6 +16,9 @@ There are many things that I need to improve, but this are the most prominent
 * Unit Test
 * Split in different module the API
 * Better use of the config files
+* Not use the minimify technique for js files 
+* Not use the compile technique to increase the performance
+* And the list goes on...
 
 #WHAT YOU NEED?
 1. You need composer, php, apache or nginx with a vhost configured plus mysql in your computer
