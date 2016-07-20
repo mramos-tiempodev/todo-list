@@ -1,9 +1,9 @@
 {
-    "name": "tecaz/client",
-    "description": "This will be change",
+    "name": "web challenge",
+    "description": "A challenge from wizeline",
     "license": "MIT",
-    "keywords": ["exchange", "zf2", "neo4j"],
-    "homepage": "http://elartedelpapaloteo.com/",
+    "keywords": ["challenge", "wizeline", "web challenge"],
+    "homepage": "http://wizeline.webchallenge.com",
     "authors": [
         {
             "name": "Martin Ramos",
@@ -19,13 +19,13 @@
     },
     "autoload": {
         "psr-4": {
-            "User\\": "module/User/src/",
-            "UnitTest\\User\\": "tests/unit/Module/User/",
-            "Wall\\": "module/Wall/src/",
-            "UnitTest\\Wall\\": "tests/unit/Module/Wall/",
-            "Api\\": "module/Api/src/",
-            "UnitTest\\Api\\": "tests/unit/Module/Api/"
+            "Task\\": "module/Task/src/"
         }
-    }
-
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "UnitTest\\Task\\": "module/Task/test/"
+        }
+    }	
 }
+

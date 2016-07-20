@@ -1,0 +1,18 @@
+.flagSection {
+    display: table-cell;
+    width: 50px;
+    height: 100px;
+}
+.green {
+    background-color:green;
+}
+
+.white {
+    background-color:#ffffff;
+    text-align: center;
+    vertical-align: middle
+}
+
+.red {
+    background-color: red;
+}
