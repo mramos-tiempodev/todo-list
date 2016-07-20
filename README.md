@@ -36,13 +36,12 @@ ENGINE = MyISAM;
 ```
 4. This is the url http://wizeline.webchallange.com/task/taskclient, so yeah, you need to create a vhost like that, I know is awful, but don't worry I will change it.
 
-5. If you wish you can test the API with curl, remember curl is your friend 
+5. If you wish you can test the API with curl, remember curl is your friend.
+
+```
 get-list
-```
 curl -i -H "Accept: application/json" http://wizeline.webchallange.com/api/task
-```
 create
-```
 curl -i -H "Accept: application/json" -X POST -d "name=AC DC&status=1" http://wizeline.webchallange.com/api/task
 ```
 
