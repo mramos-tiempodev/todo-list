@@ -2,7 +2,7 @@
     "name": "web challenge",
     "description": "A challenge from wizeline",
     "license": "MIT",
-    "keywords": ["challenge", "wizeline", "web challenge"],
+    "keywords": ["challenge", "web challenge", "todo list"],
     "homepage": "http://wizeline.webchallenge.com",
     "authors": [
         {
