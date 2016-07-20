@@ -31,7 +31,7 @@ PRIMARY KEY (`id`) ,
 UNIQUE INDEX `id_UNIQUE` (`id` ASC) )
 ENGINE = MyISAM;
 ```
-4. This is the url http://wizeline.webchallange.com/task/taskclient, so yeah, you need to create a vhost like that, I know is awful, but don't worry I will change.
+4. This is the url http://wizeline.webchallange.com/task/taskclient, so yeah, you need to create a vhost like that, I know is awful, but don't worry I will change it.
 
 #IMAGE OF THE RESULTED WORK
 ![alt text][todo]
