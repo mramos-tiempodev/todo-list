@@ -50,11 +50,6 @@ class TaskrestController extends AbstractRestfulController
         return new JsonModel($data);
     }
 
-    public function update($id, $data)
-    {
-
-    }
-
     /**
      * @return TaskModel
      */

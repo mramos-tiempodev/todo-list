@@ -45,6 +45,27 @@ tasks = {
             console.log('Something goes wrong');
         };
         $.ajax(s.ajax);
+    },
+
+    update: function() {
+        s.ajax.data = s.$taskForm.serialize();
+        s.ajax.url = 'http://wizeline.webchallange.com/task/taskclient/update';
+        s.ajax.success = function(data)
+        {
+            $('#example').DataTable({
+                "data": data.data,
+                "columns": [
+                    { "title": "Name" },
+                    { "title": "Status" },
+                    { "title": "Action" }
+                ]
+            });
+        };
+        s.ajax.error = function()
+        {
+            console.log('Something goes wrong');
+        };
+        $.ajax(s.ajax);
     }
 
 };
