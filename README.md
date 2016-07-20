@@ -36,7 +36,7 @@ ENGINE = MyISAM;
 #IMAGE OF THE RESULTED WORK
 ![alt text][todo]
 
-[todo]: https://github.com/martinn21/todo-list/public/img/system "System"
+[todo]: https://github.com/martinn21/todo-list/blob/master/public/img/system.png "System"
 
 I think that's it. See you and visit me in mmmh... the next days and I will change some things here :p
 Thank you and see you around.
