@@ -27,26 +27,10 @@ return array(
                     ),
                 ),
             ),
-            'api' => array(
-                'type' => 'Segment',
-                'options' => array(
-                    'route'    => '/api/task[/id]',
-                    'constraints' => array(
-                        'id' => '[0-9]+'
-                    ),
-                    'defaults' => array(
-                        'controller' => 'Task\Controller\Taskrest',
-                    ),
-                ),
-            ),
         ),
     ),
     'controllers' => array(
-        'factories' => array(
-            'Task\Controller\Taskrest' => 'Task\Controller\TaskrestControllerFactory',
-        ),
         'invokables' => array(
-            //'Task\Controller\Taskrest' => 'Task\Controller\TaskrestController',
             'Task\Controller\Taskclient' => 'Task\Controller\TaskclientController',
         ),
     ),

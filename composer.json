@@ -19,7 +19,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Task\\": "module/Task/src/"
+            "Task\\": "module/Task/src/",
+            "ApiTask\\": "module/ApiTask/src/"
         }
     },
     "autoload-dev": {
