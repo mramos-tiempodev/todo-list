@@ -3,6 +3,7 @@ namespace Task\Controller;
 
 use Exception;
 use Task\Model\Task as TaskModel;
+use Zend\Http\PhpEnvironment\Response;
 use Zend\Mvc\Controller\AbstractRestfulController;
 use Zend\View\Model\JsonModel;
 
@@ -48,6 +49,26 @@ class TaskrestController extends AbstractRestfulController
         }
 
         return new JsonModel($data);
+    }
+
+    public function get($id)
+    {
+        $this->methodNotAllowed();
+    }
+
+    public function update($id, $data)
+    {
+        //pending
+    }
+
+    public function delete($id)
+    {
+        $this->methodNotAllowed();
+    }
+
+    protected function methodNotAllowed()
+    {
+        $this->response->setStatusCode(Response::STATUS_CODE_405);
     }
 
     /**
