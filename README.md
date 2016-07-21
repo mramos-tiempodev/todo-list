@@ -12,10 +12,10 @@ This is not a bug but is not complete, I mean, the edit action (the logic in the
 
 #BAD THINGS:
 There are many things that I need to improve, but this are the most prominent
-* Unit Test
+* No Unit Test
 * Better use of the config files
 * Not use the minimify technique for js files 
-* Not use the compile technique to increase the performance
+* Not use the compile technique to increase the performance of js files
 * And the list goes on...
 
 #WHAT YOU NEED?
