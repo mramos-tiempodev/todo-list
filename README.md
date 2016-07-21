@@ -8,7 +8,7 @@ The technologies involucrated are php with zf2, mysql, jQuery, bootstrap, datata
 
 #BUGS
 Each time that you insert a new task you need to refresh the page, is something related with the datatable, but __the time eat me__.
-This is not a bug but is not complete, I mean, the edit action (the logic in the backend is almost done) but I need to include something like an image or stuff like that in the datatable to indicate that you want to edit the task.
+This is not a bug but is not complete, I mean, the edit action (the logic in the backend is almost done) but I need to include functionality when click the edit button in the datatable.
 
 #BAD THINGS:
 There are many things that I need to improve, but this are the most prominent
