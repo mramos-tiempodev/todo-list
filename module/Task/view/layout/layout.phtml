@@ -14,7 +14,12 @@
     <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
         ->prependStylesheet($this->basePath('css/style.css'))
         ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
-        ->prependStylesheet($this->basePath('css/bootstrap.min.css')) ?>
+        ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+        ->prependStylesheet($this->basePath('DataTables/DataTables-1.10.12/css/dataTables.bootstrap.min.css'))
+        ->prependStylesheet($this->basePath('DataTables/datatables.min.css'))
+        ->prependStylesheet($this->basePath('font-awesome/css/font-awesome.min.css'))
+    ;
+    ?>
 
     <!-- Scripts -->
     <?php echo $this->headScript()
@@ -51,9 +56,7 @@
 <?php echo $this->inlineScript() ?>
 </body>
 <?php
-echo $this->headLink()
-    ->prependStylesheet($this->basePath('DataTables/DataTables-1.10.12/css/dataTables.bootstrap.min.css'))
-    ->prependStylesheet($this->basePath('DataTables/datatables.min.css'));
+
 
 echo $this->headScript()
     ->prependFile($this->basePath('DataTables/datatables.min.js'))

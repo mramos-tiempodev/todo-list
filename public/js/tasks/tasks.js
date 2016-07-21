@@ -31,14 +31,14 @@ tasks = {
         s.ajax.url = 'http://wizeline.webchallange.com/task/taskclient/insert';
         s.ajax.success = function(data)
         {
-            $('#example').DataTable({
-                "data": data.data,
-                "columns": [
-                    { "title": "Name" },
-                    { "title": "Status" },
-                    { "title": "Action" }
-                ]
-            });
+            //$('#example').DataTable({
+            //    "data": data.data,
+            //    "columns": [
+            //        { "title": "Name" },
+            //        { "title": "Status" },
+            //        { "title": "Action" }
+            //    ]
+            //});
         };
         s.ajax.error = function()
         {
@@ -47,19 +47,36 @@ tasks = {
         $.ajax(s.ajax);
     },
 
+    //save2: function() {
+    //    var example_table = $('#example').DataTable({
+    //        'ajax': {
+    //            "type"   : "POST",
+    //            "url"    : "http://wizeline.webchallange.com/task/taskclient/insert",
+    //            "data"   : s.$taskForm.serialize(),
+    //            "dataSrc": ""
+    //        },
+    //        "columns": [
+    //            { "title": "Name" },
+    //            { "title": "Status" },
+    //            { "title": "Action" }
+    //        ]
+    //    });
+    //    example_table.ajax.reload();
+    //},
+
     update: function() {
         s.ajax.data = s.$taskForm.serialize();
         s.ajax.url = 'http://wizeline.webchallange.com/task/taskclient/update';
         s.ajax.success = function(data)
         {
-            $('#example').DataTable({
-                "data": data.data,
-                "columns": [
-                    { "title": "Name" },
-                    { "title": "Status" },
-                    { "title": "Action" }
-                ]
-            });
+            //$('#example').DataTable({
+            //    "data": data.data,
+            //    "columns": [
+            //        { "title": "Name" },
+            //        { "title": "Status" },
+            //        { "title": "Action" }
+            //    ]
+            //});
         };
         s.ajax.error = function()
         {
