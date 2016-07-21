@@ -7,6 +7,9 @@ use Zend\Http\PhpEnvironment\Response;
 use Zend\Mvc\Controller\AbstractRestfulController;
 use Zend\View\Model\JsonModel;
 
+/**
+ * Used to receive any call that came from outside
+ */
 class TaskrestController extends AbstractRestfulController
 {
 
@@ -51,21 +54,40 @@ class TaskrestController extends AbstractRestfulController
         return new JsonModel($data);
     }
 
+    /**
+     * @param string $id
+     *
+     * @return mixed|void
+     */
     public function get($id)
     {
         $this->methodNotAllowed();
     }
 
+    /**
+     * @param string $id
+     * @param array $data
+     *
+     * @return mixed|void
+     */
     public function update($id, $data)
     {
         //pending
     }
 
+    /**
+     * @param string $id
+     *
+     * @return mixed|void
+     */
     public function delete($id)
     {
         $this->methodNotAllowed();
     }
 
+    /**
+     * This method is used to restrict the entry point for any call that try to connect
+     */
     protected function methodNotAllowed()
     {
         $this->response->setStatusCode(Response::STATUS_CODE_405);

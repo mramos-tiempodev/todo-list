@@ -1,11 +1,12 @@
 <?php
 namespace Task\Model;
 
+use Zend\Db\ResultSet\ResultSet;
 use Zend\Db\Sql\Select;
 use Zend\Db\TableGateway\TableGateway;
 
 /**
- * Used to fetch data from the database
+ * Used to manage data from the database
  */
 class Task
 {
@@ -17,6 +18,9 @@ class Task
         $this->setTableGateway($tableGateway);
     }
 
+    /**
+     * @return ResultSet
+     */
     public function fetchAll()
     {
         return $this->getTableGateway()->select(function (Select $select) {
@@ -24,6 +28,11 @@ class Task
         });
     }
 
+    /**
+     * @param array $data
+     *
+     * @return bool|int
+     */
     public function saveTask($data)
     {
         if (!isset($data['id'])) {

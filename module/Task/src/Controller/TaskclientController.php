@@ -7,6 +7,9 @@ use Zend\View\Model\JsonModel;
 use Zend\Http\Client as HttpClient;
 use Zend\View\Model\ViewModel;
 
+/**
+ * Used to receive all the calls from the frontend of the app
+ */
 class TaskclientController extends AbstractActionController
 {
 

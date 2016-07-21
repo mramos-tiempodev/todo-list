@@ -11,6 +11,9 @@ class Task
     public $name;
     public $status;
 
+    /**
+     * @param array $data
+     */
     public function exchangeArray($data)
     {
         $this->id = (isset($data['id'])) ? $data['id'] : null;

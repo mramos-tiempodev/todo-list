@@ -10,7 +10,9 @@ use Task\Options\Task as TaskOption;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
-
+/**
+ * Used to create the TaskModel object but inject all his dependencies
+ */
 class TaskFactory implements FactoryInterface
 {
 
@@ -34,6 +36,8 @@ class TaskFactory implements FactoryInterface
         $resultSetProperty->setObjectPrototype(new TaskOption());
 
         $tableGateway = new TableGateway(self::TABLE, $db, null, $resultSetProperty);
+        //TODO: create an interface to manage the model as something abstract
+        //instead of depend from in this case tablegateway
         return new TaskModel($tableGateway);
     }
 }
