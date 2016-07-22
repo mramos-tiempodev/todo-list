@@ -39,14 +39,11 @@ class Task
             if (!$this->getTableGateway()->insert($data))
                 return false;
             return $this->getTableGateway()->getLastInsertValue();
-        }
-        elseif ($data['id']) {
+        } else {
             if (!$this->getTableGateway()->update($data, array('id' => $data['id'])))
                 return false;
             return $data['id'];
         }
-        else
-            return false;
     }
 
     /**

@@ -30,14 +30,14 @@ class TaskFactory implements FactoryInterface
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
         /** @var AdapterInterface $db */
-        $db = $serviceLocator->get(self::DB_ADAPTER);
+        $db = $serviceLocator->get('Zend\Db\Adapter\Adapter');
         $resultSetProperty = new HydratingResultSet();
         $resultSetProperty->setHydrator(new ObjectProperty());
         $resultSetProperty->setObjectPrototype(new TaskOption());
 
         $tableGateway = new TableGateway(self::TABLE, $db, null, $resultSetProperty);
         //TODO: create an interface to manage the model as something abstract
-        //instead of depend from in this case tablegateway
+        //instead of depend from in this case tableGateway
         return new TaskModel($tableGateway);
     }
 }
