@@ -4,7 +4,8 @@ TODO LIST
 This is a very very basic todo list and is not finished, there are some functionalities that are missing and other are not working correctly.
 The idea is create an API with three end points get, post and put (delete is missing).
 Create the client side and interact with the api.
-The technologies involucrated are php with zf2, mysql, jQuery, bootstrap, datatables and that's it.
+The technologies involucrated are vagrant and virtualbox for the environment, so you need to download and install them; 
+plus php with zf2, mysql, jQuery, bootstrap, datatables and that's it.
 
 #BUGS
 Each time that you insert a new task you need to refresh the page, is something related with the datatable, but __the time eat me__.
@@ -19,9 +20,11 @@ There are many things that I need to improve, but this are the most prominent
 * And the list goes on...
 
 #WHAT YOU NEED?
-1. You need composer, php, apache or nginx with a vhost configured plus mysql in your computer
-2. Run composer install
-3. You need to create a table
+1. You need to run all the vagrant things (vagrant init & vagrant up).
+2  Then vagrant ssh and make sure you have php, nginx, mysql once that you up your virtual machine (sudo service daemon status) if not you need to install them.
+3  Move to the root path of the application and run composer install
+4. Then you need to create a mysql table
+
 ```
 DROP TABLE IF EXISTS `wizeline`.`tasks` ;
 CREATE TABLE IF NOT EXISTS `wizeline`.`tasks` (
@@ -32,9 +35,8 @@ PRIMARY KEY (`id`) ,
 UNIQUE INDEX `id_UNIQUE` (`id` ASC) )
 ENGINE = MyISAM;
 ```
-4. This is the url http://wizeline.webchallange.com/task/taskclient, so yeah, you need to create a vhost like that, I know is awful, but don't worry I will change it.
-
-5. If you wish you can test the API with curl, remember curl is your friend.
+5. This is the url http://wizeline.webchallange.com/task/taskclient, so yeah, you need to create a vhost like that, I know is awful, but don't worry I will change it.
+6. If you wish you can test the API with curl, remember curl is your friend.
 
 ```
 get-list
