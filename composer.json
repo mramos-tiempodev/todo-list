@@ -1,9 +1,8 @@
 {
-    "name": "web challenge",
-    "description": "A challenge from wizeline",
+    "name": "TODO LIST",
+    "description": "A sample for todo list",
     "license": "MIT",
-    "keywords": ["challenge", "web challenge", "todo list"],
-    "homepage": "http://wizeline.webchallenge.com",
+    "homepage": "http://tiempo.todolist.com",
     "authors": [
         {
             "name": "Martin Ramos",

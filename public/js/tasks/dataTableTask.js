@@ -10,7 +10,6 @@ var dataTableTask = {
     },
 
     initDataTable: function() {
-        console.log(taskRows);
         s.$table.DataTable({
             "bLengthChange": false,
             "bFilter": false,

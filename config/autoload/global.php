@@ -14,7 +14,7 @@
 return array(
     'db' => array(
         'driver' => 'Pdo',
-        'dsn'            => 'mysql:dbname=wizeline;host=localhost',
+        'dsn'            => 'mysql:dbname=tiempo;host=localhost',
         'username'       =>'homestead',
         'password'      =>'secret',
         'driver_options' => array(

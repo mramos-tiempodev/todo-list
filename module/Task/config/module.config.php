@@ -57,10 +57,6 @@ return array(
         )
     ),
     'service_manager' => array(
-        'invokables' => array(
-//            'Zend\Hydrator\ClassMethods' => 'Zend\Hydrator\ClassMethods',
-//            'Wall\Service\Wizeline' => 'Wall\Service\Wizeline'
-        ),
         'factories' => array(
             'Task' => 'Task\Model\TaskFactory'
         ),

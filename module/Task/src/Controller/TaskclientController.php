@@ -13,11 +13,14 @@ use Zend\View\Model\ViewModel;
 class TaskclientController extends AbstractActionController
 {
 
+	const URL_INDEX_ACTION = 'http://tiempo.todolist.com/api/task';
+	const URL_INSERT_ACTION = 'http://tiempo.todolist.com/api/task';
+
     public function indexAction()
     {
         $client = new HttpClient();
         $client->setAdapter('Zend\Http\Client\Adapter\Curl');
-        $client->setUri('http://wizeline.webchallange.com/api/task');
+        $client->setUri(self::URL_INDEX_ACTION);
         $client->setMethod('GET');
         $response = $client->send();
 
@@ -35,7 +38,7 @@ class TaskclientController extends AbstractActionController
 
         $client = new HttpClient();
         $client->setAdapter('Zend\Http\Client\Adapter\Curl');
-        $client->setUri('http://wizeline.webchallange.com/api/task');
+        $client->setUri(self::URL_INSERT_ACTION);
         $client->setMethod('POST');
         $client->setParameterPOST($post);
         $response = $client->send();
@@ -43,17 +46,12 @@ class TaskclientController extends AbstractActionController
         if (!$response->isSuccess()) {
             // report failure
             $message = $response->getStatusCode() . ': ' . $response->getReasonPhrase();
-
             $return = array('result' => false, 'error' => $message);
         } else {
-            $return = array('result' => true, 'data' => $response->getContent(), 'errors' => null);
+            $hello = json_decode($response->getContent());
+            $return = array($hello);
         }
 
         return new JsonModel($return);
-    }
-
-    public function updateAction()
-    {
-        //pending
     }
 } 

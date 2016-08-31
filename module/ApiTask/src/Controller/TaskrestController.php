@@ -29,16 +29,13 @@ class TaskrestController extends AbstractRestfulController
     public function create($data)
     {
         try {
-            $result = $this->getTaskModel()->saveTask($data);
-            $data['id'] = $result;
-        } catch(Exception $e) {
-            $result = false;
-            $error = $e->getMessage();
-        }
-        if ($result)
+            unset($data['id']);
+            $id = $this->getTaskModel()->saveTask($data);
+            $data['id'] = $id;
             $result = array('result' => true, 'data' => $data, 'errors' => null);
-        else
-            $result = array('result' => false, 'errors' => $error);
+        } catch(Exception $e) {
+            $result = array('result' => false, 'errors' => $e->getMessage());
+        }
 
         return new JsonModel($result);
     }

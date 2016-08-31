@@ -1,5 +1,6 @@
 tasks = {
     settings: {
+        baseURL: "http://tiempo.todolist.com/",
         $sendButton: $("#send-task"),
         $taskForm: $("#taskForm"),
         ajax: {
@@ -28,17 +29,23 @@ tasks = {
 
     save: function() {
         s.ajax.data = s.$taskForm.serialize();
-        s.ajax.url = 'http://wizeline.webchallange.com/task/taskclient/insert';
+        s.ajax.url = s.baseURL + 'task/taskclient/insert';
         s.ajax.success = function(data)
         {
+            if($('#example').length > 0) {
+                console.log('exist it');
+            } else {
+                console.log('not exist it');
+            }
             //$('#example').DataTable({
-            //    "data": data.data,
+            //    "data": data[0].data,
             //    "columns": [
             //        { "title": "Name" },
             //        { "title": "Status" },
             //        { "title": "Action" }
             //    ]
             //});
+            console.log('Something goes good');
         };
         s.ajax.error = function()
         {
@@ -47,26 +54,10 @@ tasks = {
         $.ajax(s.ajax);
     },
 
-    //save2: function() {
-    //    var example_table = $('#example').DataTable({
-    //        'ajax': {
-    //            "type"   : "POST",
-    //            "url"    : "http://wizeline.webchallange.com/task/taskclient/insert",
-    //            "data"   : s.$taskForm.serialize(),
-    //            "dataSrc": ""
-    //        },
-    //        "columns": [
-    //            { "title": "Name" },
-    //            { "title": "Status" },
-    //            { "title": "Action" }
-    //        ]
-    //    });
-    //    example_table.ajax.reload();
-    //},
 
     update: function() {
         s.ajax.data = s.$taskForm.serialize();
-        s.ajax.url = 'http://wizeline.webchallange.com/task/taskclient/update';
+        s.ajax.url = s.baseURL + 'task/taskclient/update';
         s.ajax.success = function(data)
         {
             //$('#example').DataTable({

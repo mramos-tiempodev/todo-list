@@ -35,9 +35,10 @@ class Task
      */
     public function saveTask($data)
     {
-        if (!isset($data['id'])) {
-            if (!$this->getTableGateway()->insert($data))
+        if (empty($data['id'])) {
+            if (!$this->getTableGateway()->insert($data)) {
                 return false;
+            }
             return $this->getTableGateway()->getLastInsertValue();
         } else {
             if (!$this->getTableGateway()->update($data, array('id' => $data['id'])))
